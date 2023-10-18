@@ -13,6 +13,12 @@
 		F5EFE4B62ADFAFE40082F941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B42ADFAFE40082F941 /* Main.storyboard */; };
 		F5EFE4B82ADFAFE50082F941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */; };
 		F5EFE4BB2ADFAFE50082F941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B92ADFAFE50082F941 /* LaunchScreen.storyboard */; };
+		F5EFE4C32ADFB8E80082F941 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4C22ADFB8E80082F941 /* SearchResultsViewController.swift */; };
+		F5EFE4C52ADFBC540082F941 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4C42ADFBC540082F941 /* APICaller.swift */; };
+		F5EFE4C72ADFC43A0082F941 /* WikiSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4C62ADFC4390082F941 /* WikiSearchResult.swift */; };
+		F5EFE4C92ADFC73E0082F941 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4C82ADFC73D0082F941 /* SearchResultTableViewCell.swift */; };
+		F5EFE4CC2ADFDF960082F941 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F5EFE4CB2ADFDF960082F941 /* SDWebImage */; };
+		F5EFE4CE2ADFDF960082F941 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F5EFE4CD2ADFDF960082F941 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5EFE4BA2ADFAFE50082F941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5EFE4BC2ADFAFE50082F941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5EFE4C22ADFB8E80082F941 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		F5EFE4C42ADFBC540082F941 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		F5EFE4C62ADFC4390082F941 /* WikiSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchResult.swift; sourceTree = "<group>"; };
+		F5EFE4C82ADFC73D0082F941 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EFE4CE2ADFDF960082F941 /* SDWebImageMapKit in Frameworks */,
+				F5EFE4CC2ADFDF960082F941 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,10 @@
 				F5EFE4AE2ADFAFE40082F941 /* AppDelegate.swift */,
 				F5EFE4B02ADFAFE40082F941 /* SceneDelegate.swift */,
 				F5EFE4B22ADFAFE40082F941 /* ViewController.swift */,
+				F5EFE4C22ADFB8E80082F941 /* SearchResultsViewController.swift */,
+				F5EFE4C42ADFBC540082F941 /* APICaller.swift */,
+				F5EFE4C62ADFC4390082F941 /* WikiSearchResult.swift */,
+				F5EFE4C82ADFC73D0082F941 /* SearchResultTableViewCell.swift */,
 				F5EFE4B42ADFAFE40082F941 /* Main.storyboard */,
 				F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */,
 				F5EFE4B92ADFAFE50082F941 /* LaunchScreen.storyboard */,
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = "Wiki Search";
+			packageProductDependencies = (
+				F5EFE4CB2ADFDF960082F941 /* SDWebImage */,
+				F5EFE4CD2ADFDF960082F941 /* SDWebImageMapKit */,
+			);
 			productName = "Wiki Search";
 			productReference = F5EFE4AB2ADFAFE40082F941 /* Wiki Search.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = F5EFE4A22ADFAFE40082F941;
+			packageReferences = (
+				F5EFE4CA2ADFDF960082F941 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = F5EFE4AC2ADFAFE40082F941 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5EFE4C92ADFC73E0082F941 /* SearchResultTableViewCell.swift in Sources */,
+				F5EFE4C72ADFC43A0082F941 /* WikiSearchResult.swift in Sources */,
 				F5EFE4B32ADFAFE40082F941 /* ViewController.swift in Sources */,
+				F5EFE4C32ADFB8E80082F941 /* SearchResultsViewController.swift in Sources */,
 				F5EFE4AF2ADFAFE40082F941 /* AppDelegate.swift in Sources */,
+				F5EFE4C52ADFBC540082F941 /* APICaller.swift in Sources */,
 				F5EFE4B12ADFAFE40082F941 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,11 +317,12 @@
 				DEVELOPMENT_TEAM = F49PTZF8DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wiki Search/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wiki Search";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +346,12 @@
 				DEVELOPMENT_TEAM = F49PTZF8DC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wiki Search/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wiki Search";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +387,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5EFE4CA2ADFDF960082F941 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5EFE4CB2ADFDF960082F941 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5EFE4CA2ADFDF960082F941 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F5EFE4CD2ADFDF960082F941 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5EFE4CA2ADFDF960082F941 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5EFE4A32ADFAFE40082F941 /* Project object */;
 }
