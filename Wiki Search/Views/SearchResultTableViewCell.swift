@@ -17,7 +17,6 @@ class SearchResultTableViewCell: UITableViewCell {
         icon.clipsToBounds = true
         icon.contentMode = .scaleAspectFill
         icon.layer.cornerRadius = 5
-        icon.backgroundColor = .red
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
@@ -40,7 +39,7 @@ class SearchResultTableViewCell: UITableViewCell {
     
 //    private var titleLeadingConstraint = NSLayoutConstraint()
 //    private var subtitleLeadingConstraint = NSLayoutConstraint()
-//    var iconWidthConstraint = NSLayoutConstraint()
+    var iconWidthConstraint: NSLayoutConstraint?
 
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -57,18 +56,25 @@ class SearchResultTableViewCell: UITableViewCell {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         
-        guard let url = iconUrl else { return }
-        iconView.sd_setImage(with: URL(string: url))
+        if let url = iconUrl {
+            iconWidthConstraint?.constant = 45
+            iconView.isHidden = false
+            iconView.sd_setImage(with: URL(string: url))
+        }else{
+            iconWidthConstraint?.constant = 0
+            iconView.isHidden = true
+        }
     
     }
     
     func setUpView(){
         contentView.addSubview(iconView)
+        iconWidthConstraint = iconView.widthAnchor.constraint(equalToConstant: 45)
+        iconWidthConstraint?.isActive = true
         NSLayoutConstraint.activate([
             iconView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             iconView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             iconView.heightAnchor.constraint(equalToConstant: 45),
-            iconView.widthAnchor.constraint(equalToConstant: 45)
         ])
         
         contentView.addSubview(titleLabel)
