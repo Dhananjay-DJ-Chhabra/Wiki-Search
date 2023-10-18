@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F5EFE4AF2ADFAFE40082F941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4AE2ADFAFE40082F941 /* AppDelegate.swift */; };
 		F5EFE4B12ADFAFE40082F941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4B02ADFAFE40082F941 /* SceneDelegate.swift */; };
-		F5EFE4B32ADFAFE40082F941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4B22ADFAFE40082F941 /* ViewController.swift */; };
+		F5EFE4B32ADFAFE40082F941 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFE4B22ADFAFE40082F941 /* MainViewController.swift */; };
 		F5EFE4B62ADFAFE40082F941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B42ADFAFE40082F941 /* Main.storyboard */; };
 		F5EFE4B82ADFAFE50082F941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */; };
 		F5EFE4BB2ADFAFE50082F941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5EFE4B92ADFAFE50082F941 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		F5EFE4AB2ADFAFE40082F941 /* Wiki Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wiki Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5EFE4AE2ADFAFE40082F941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5EFE4B02ADFAFE40082F941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5EFE4B22ADFAFE40082F941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5EFE4B22ADFAFE40082F941 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F5EFE4B52ADFAFE40082F941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5EFE4BA2ADFAFE50082F941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		849741182AE02146004F3080 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5EFE4B22ADFAFE40082F941 /* MainViewController.swift */,
+				F5EFE4C22ADFB8E80082F941 /* SearchResultsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		849741192AE02162004F3080 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5EFE4C82ADFC73D0082F941 /* SearchResultTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8497411A2AE02173004F3080 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5EFE4C62ADFC4390082F941 /* WikiSearchResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8497411B2AE02180004F3080 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F5EFE4C42ADFBC540082F941 /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8497411C2AE0218B004F3080 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5EFE4B02ADFAFE40082F941 /* SceneDelegate.swift */,
+				F5EFE4AE2ADFAFE40082F941 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F5EFE4A22ADFAFE40082F941 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +110,11 @@
 		F5EFE4AD2ADFAFE40082F941 /* Wiki Search */ = {
 			isa = PBXGroup;
 			children = (
-				F5EFE4AE2ADFAFE40082F941 /* AppDelegate.swift */,
-				F5EFE4B02ADFAFE40082F941 /* SceneDelegate.swift */,
-				F5EFE4B22ADFAFE40082F941 /* ViewController.swift */,
-				F5EFE4C22ADFB8E80082F941 /* SearchResultsViewController.swift */,
-				F5EFE4C42ADFBC540082F941 /* APICaller.swift */,
-				F5EFE4C62ADFC4390082F941 /* WikiSearchResult.swift */,
-				F5EFE4C82ADFC73D0082F941 /* SearchResultTableViewCell.swift */,
+				8497411C2AE0218B004F3080 /* Resources */,
+				8497411B2AE02180004F3080 /* Managers */,
+				8497411A2AE02173004F3080 /* Models */,
+				849741192AE02162004F3080 /* Views */,
+				849741182AE02146004F3080 /* Controllers */,
 				F5EFE4B42ADFAFE40082F941 /* Main.storyboard */,
 				F5EFE4B72ADFAFE50082F941 /* Assets.xcassets */,
 				F5EFE4B92ADFAFE50082F941 /* LaunchScreen.storyboard */,
@@ -163,7 +203,7 @@
 			files = (
 				F5EFE4C92ADFC73E0082F941 /* SearchResultTableViewCell.swift in Sources */,
 				F5EFE4C72ADFC43A0082F941 /* WikiSearchResult.swift in Sources */,
-				F5EFE4B32ADFAFE40082F941 /* ViewController.swift in Sources */,
+				F5EFE4B32ADFAFE40082F941 /* MainViewController.swift in Sources */,
 				F5EFE4C32ADFB8E80082F941 /* SearchResultsViewController.swift in Sources */,
 				F5EFE4AF2ADFAFE40082F941 /* AppDelegate.swift in Sources */,
 				F5EFE4C52ADFBC540082F941 /* APICaller.swift in Sources */,
